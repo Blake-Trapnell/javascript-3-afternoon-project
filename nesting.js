@@ -51,8 +51,14 @@ var employees = [
 */
 
 //Code Here
-
-
+let employeeUpdater = () => {
+  for (let key in employees) {
+    if (employees[firstName].includes( `theo`)) {
+      delete employees.key
+    }
+  }
+  return employees
+}
 
 ////////// PROBLEM 2 //////////
 
@@ -69,7 +75,15 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
-
+let removeDuplicates = ()=> {
+for (let i = 0; i < workplaceAccidents.length; i++) {
+  for (let j = 0; j < workplaceAccidents.length; j++) {
+    if (christmasList[i] === christmasList[j] && i !== j) {
+      workplaceAccidents.splice(i, 1)
+    }
+  }
+}
+}
 
 
 ////////// PROBLEM 3 //////////

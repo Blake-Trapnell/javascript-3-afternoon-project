@@ -51,19 +51,23 @@ var employees = [
 */
 
 //Code Here
-let employeeUpdater = ()=> {
-  for (i = 0; i < employees.length; i++) {
-    for (let key in employees[i]) {
-      if (employees[i].firstName == "Theo") {
-        employees.splice(i,1)
-      }    
-      if (employees[i].firstName == "Lorie") {
+// let employeeUpdater= ()=> {for(var i=0; i<employees.length; i++){  
+//    if (employees[i].firstName === 'Theo'){
+//      employees.splice(i,1)   }
+//    else if (employees[i].firstName === 'Lorie'){
+//   {  employees[i].department = 'HR'   }
+//     }
+//    } return employees; }
+          
+let employeeUpdater = ()=> {for(let i = 0; i < employees.length; i++) {
+      if (employees[i].firstName === "Theo") {
+        employees.splice(i,1)  }    
+    else if (employees[i].firstName === "Lorie") {
         employees[i].department = "HR"
       }
       }
+      return employees;
   }
-}
-employeeUpdater()
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
@@ -191,4 +195,5 @@ let looper = ()=> {
 else { numsArr[i][j] = "odd" }
     }
   }
+  return numsArr
 }

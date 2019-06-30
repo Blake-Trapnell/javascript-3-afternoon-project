@@ -51,15 +51,19 @@ var employees = [
 */
 
 //Code Here
-let employeeUpdater = () => {
-  for (let key in employees) {
-    if (employees[firstName].includes( `theo`)) {
-      delete employees.key
-    }
+let employeeUpdater = ()=> {
+  for (i = 0; i < employees.length; i++) {
+    for (let key in employees[i]) {
+      if (employees[i].firstName == "Theo") {
+        employees.splice(i,1)
+      }    
+      if (employees[i].firstName == "Lorie") {
+        employees[i].department = "HR"
+      }
+      }
   }
-  return employees
 }
-
+employeeUpdater()
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
@@ -76,15 +80,18 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 //Code Here
 let removeDuplicates = ()=> {
-for (let i = 0; i < workplaceAccidents.length; i++) {
-  for (let j = 0; j < workplaceAccidents.length; j++) {
-    if (christmasList[i] === christmasList[j] && i !== j) {
-      workplaceAccidents.splice(i, 1)
+  for (let i = 0; i < workplaceAccidents.length; i++) {
+    for (let j = 0; j < workplaceAccidents.length; j++) {
+      if (workplaceAccidents[i] === workplaceAccidents[j] 
+      && i !== j) {
+        workplaceAccidents.splice(i,1)
+      }
     }
   }
-}
-}
-
+  return workplaceAccidents
+  }
+  removeDuplicates()
+  
 
 ////////// PROBLEM 3 //////////
 
@@ -111,8 +118,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
@@ -144,8 +151,7 @@ var myCar = {
 // Do not edit the code above.
 
 /*
-  Above is some information about my car. As you can see, I am not the best driver.
-  I have caused a few accidents.
+    I have caused a few accidents.
   Please update this driving record so that I can feel better about my driving skills.
     1. Write a function called recordCleaner.
     2. Loop over the accidents array.
@@ -153,9 +159,13 @@ var myCar = {
 */
 
 //Code Here
+let recordCleaner = ()=> {
+  for (let key in myCar.accidents) {
+    myCar.accidents[key].atFaultForAccident = false
 
-
-
+  }
+}
+recordCleaner()
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
@@ -172,5 +182,13 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
-
-
+let looper = ()=> {
+  for (i = 0; i < numsArr.length; i++) {
+  for (j = 0; j < numsArr[i].length; j++) {
+ if (numsArr[i][j] % 2 == 0) {
+    numsArr[i][j] = "even"
+  }
+else { numsArr[i][j] = "odd" }
+    }
+  }
+}
